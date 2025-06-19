@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Shanghai COVID-19 2022 Outbreak Forecast | Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shanghai COVID-19 Forecast | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
@@ -17,33 +17,28 @@
       background: linear-gradient(90deg, #0f172a, #1e293b);
       color: #fff;
       padding: 40px 20px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
       text-align: center;
-      gap: 20px;
     }
     header h1 {
       margin: 0;
       font-size: 2.2rem;
-      max-width: 900px;
-      line-height: 1.2;
     }
-    .github-btn {
+    .github-link {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+    .github-link a {
       background-color: #2563eb;
-      color: white;
-      font-weight: 700;
-      padding: 12px 28px;
-      border-radius: 8px;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 6px;
       text-decoration: none;
-      box-shadow: 0 4px 8px rgba(37, 99, 235, 0.5);
-      transition: background-color 0.3s ease, box-shadow 0.3s ease;
-      font-size: 1.1rem;
-      user-select: none;
+      font-weight: 600;
+      transition: background-color 0.3s ease;
     }
-    .github-btn:hover {
-      background-color: #1e40af;
-      box-shadow: 0 6px 12px rgba(37, 99, 235, 0.8);
+    .github-link a:hover {
+      background-color: #1d4ed8;
     }
     main {
       max-width: 900px;
@@ -59,14 +54,7 @@
       margin-top: 1.5rem;
     }
     ul {
-      margin-left: 1.2rem;
-    }
-    a {
-      color: #2563eb;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
+      padding-left: 20px;
     }
     footer {
       background: #1e293b;
@@ -76,18 +64,80 @@
       margin-top: 40px;
       font-size: 0.9rem;
     }
+    footer a {
+      color: #93c5fd;
+      text-decoration: none;
+    }
   </style>
 </head>
 <body>
+
   <header>
     <h1>Shanghai COVID-19 2022 Outbreak Forecast</h1>
-    <a
-      href="https://github.com/snw16/Shanghai-COVID-19-Outbreak-Forecast"
-      target="_blank"
-      rel="noopener"
-      class="github-btn"
-      >View on GitHub</a
-    >
+  </header>
 
+  <div class="github-link">
+    <a href="https://github.com/snw16/Shanghai_Covid_Predictions" target="_blank">🔗 View on GitHub</a>
+  </div>
 
+  <main>
+    <h2>Background</h2>
+    <p>In March 2022, Shanghai experienced a severe outbreak of COVID-19 caused by the Omicron variant, leading to large-scale lockdowns and strict public health interventions. The outbreak had a profound impact on the local economy, daily life, and attracted nationwide attention due to its spillover effects on other regions of China.</p>
+    <p>This project focuses on building predictive models to forecast the short-term trends of confirmed COVID-19 cases and asymptomatic infections in Shanghai. These forecasts assist policymakers in making timely, scientific, and effective prevention and control strategies, as well as resource allocation plans.</p>
 
+    <h2>Objectives</h2>
+    <ul>
+      <li><strong>Accurate Epidemic Forecasting:</strong> Predict short-term trends of confirmed cases and asymptomatic infections.</li>
+      <li><strong>Trend Analysis:</strong> Compare predictions with historical data to uncover outbreak patterns.</li>
+      <li><strong>Decision Support:</strong> Provide insights for policymakers, healthcare institutions, and the public.</li>
+    </ul>
+
+    <h2>Benefits</h2>
+    <ul>
+      <li><strong>Improved Early Warning & Response:</strong> Enable rapid and targeted control measures.</li>
+      <li><strong>Optimized Resource Allocation:</strong> Prepare for medical supply, staff, and emergency planning.</li>
+      <li><strong>Enhanced Public Engagement:</strong> Transparent forecasts to build trust and cooperation.</li>
+    </ul>
+
+    <h2>Specific Impacts</h2>
+    <ul>
+      <li>Timely detection and alerts to help monitor the outbreak trajectory.</li>
+      <li>Efficient planning for healthcare demands and emergency response.</li>
+      <li>Inform targeted community interventions and optimize reopening schedules.</li>
+      <li>Strengthen public confidence through transparency and accuracy.</li>
+    </ul>
+
+    <h2>Evaluation Metrics</h2>
+    <ul>
+      <li>R-Squared (R²)</li>
+      <li>Mean Absolute Error (MAE)</li>
+      <li>Mean Absolute Percentage Error (MAPE)</li>
+      <li>Root Mean Squared Error (RMSE)</li>
+      <li>Normalized RMSE (NRMSE)</li>
+      <li>Weighted MAPE (WMAPE)</li>
+    </ul>
+
+    <h2>Challenges</h2>
+    <ul>
+      <li><strong>Data Acquisition:</strong> Required regular updates and adaptation to evolving formats.</li>
+      <li><strong>Data Cleaning:</strong> Required handling of missing values, anomaly detection, and integration.</li>
+      <li><strong>Crawler Reliability:</strong> Needed robustness against website structure changes.</li>
+    </ul>
+
+    <h2>Future Work</h2>
+    <ul>
+      <li>Improve data pipelines for completeness and accuracy.</li>
+      <li>Expand features with external data (mobility, weather, epidemiological factors).</li>
+      <li>Apply feature importance ranking and dimensionality reduction.</li>
+      <li>Develop ensemble models combining ARIMA, LSTM, and others.</li>
+      <li>Implement real-time forecasts for immediate risk assessments.</li>
+      <li>Use interpretability techniques (e.g., SHAP values) for greater stakeholder trust.</li>
+    </ul>
+  </main>
+
+  <footer>
+    <a href="https://snw16.github.io/portfolio/">← Back to Portfolio</a>
+  </footer>
+
+</body>
+</html>
