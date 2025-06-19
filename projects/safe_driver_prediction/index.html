@@ -1,48 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Driving Towards Safety - Project Showcase</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Safe Driver Prediction | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
-    body { font-family: 'Inter', sans-serif; margin: 0; background-color: #f8fafc; color: #1e293b; }
-    header { background: linear-gradient(90deg, #0f172a, #1e293b); color: #fff; padding: 40px 20px; text-align: center; }
-    header h1 { margin: 0; font-size: 2.5rem; }
-    header p { margin-top: 10px; color: #cbd5e1; }
-    .container { max-width: 900px; margin: 30px auto; padding: 0 20px; line-height: 1.7; }
-    h2 { color: #0f172a; margin-top: 30px; }
-    a { color: #2563eb; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    .button { display: inline-block; background: #2563eb; color: #fff; padding: 10px 16px; border-radius: 8px; margin-top: 20px; text-decoration: none; }
-    footer { margin-top: 40px; padding: 15px; text-align: center; background: #1e293b; color: #cbd5e1; font-size: 0.9rem; }
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      line-height: 1.6;
+    }
+    header {
+      background: linear-gradient(90deg, #0f172a, #1e293b);
+      color: #fff;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.2rem;
+    }
+    main {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    h2 {
+      color: #0f172a;
+      margin-top: 2rem;
+    }
+    h3 {
+      color: #1e293b;
+      margin-top: 1.5rem;
+    }
+    code, pre {
+      background: #e2e8f0;
+      padding: 5px 8px;
+      border-radius: 5px;
+      font-family: 'Courier New', monospace;
+    }
+    pre {
+      overflow-x: auto;
+      padding: 12px;
+    }
+    a {
+      color: #2563eb;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    footer {
+      background: #1e293b;
+      color: #cbd5e1;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+      font-size: 0.9rem;
+    }
   </style>
 </head>
 <body>
+
   <header>
-    <h1>Driving Towards Safety</h1>
-    <p>XGBoost-Enhanced Prediction of Safe Drivers</p>
+    <h1>Driving Towards Safety: XGBoost-Enhanced Prediction of Safe Drivers</h1>
   </header>
 
-  <div class="container">
-    <h2>📌 Project Overview</h2>
-    <p>This project leverages advanced feature engineering and optimized XGBoost modeling to predict safe drivers in the Porto Seguro dataset, achieving a normalized Gini score of <strong>0.28</strong>.</p>
+  <main>
+    <h2>Project Overview</h2>
+    <h3>Objective</h3>
+    <p>
+      This project aims to predict the likelihood of insurance claims by analyzing drivers’ profiles and driving history. 
+      The goal is to help insurance companies optimize premium pricing, improve risk management, and enhance customer satisfaction.
+    </p>
 
-    <h2>🔧 Key Contributions</h2>
+    <h3>Business Value</h3>
     <ul>
-      <li>Processed over 1 million records with missing and abnormal data handling based on business logic.</li>
-      <li>Performed advanced feature engineering, reducing dimensions from 57 to 30.</li>
-      <li>Applied sophisticated resampling methods (Borderline-SMOTE & SMOTE-ENN) to address data imbalance.</li>
-      <li>Built and fine-tuned XGBoost classifier to optimize predictive performance.</li>
+      <li><strong>Optimized Premium Pricing:</strong> Personalized premiums, avoid overpricing/underpricing risks.</li>
+      <li><strong>Improved Claims Accuracy:</strong> Better claims resource allocation, reduce unexpected costs.</li>
+      <li><strong>Enhanced Risk Management:</strong> Identify high-risk groups and deliver targeted recommendations.</li>
+      <li><strong>Better Customer Experience:</strong> Tailored offers to improve retention and satisfaction.</li>
     </ul>
 
-    <h2>📊 Technologies Used</h2>
-    <p>Python, XGBoost, Pandas, NumPy, Scikit-learn, PowerBI</p>
+    <h3>Evaluation Metric</h3>
+    <p><strong>Normalized Gini Coefficient:</strong> Robust for imbalanced data, focuses on model’s ranking ability, ideal for insurance tasks.</p>
 
-    <a href="https://github.com/snw16/Porto-Seguro-s-Safe-Driver-Prediction" class="button" target="_blank">View Code on GitHub →</a>
-  </div>
+    <h3>Example Implementation</h3>
+<pre><code>def gini(actual, pred):
+    assert len(actual) == len(pred)
+    all = np.asarray(np.c_[actual, pred, np.arange(len(actual))], dtype=np.float64)
+    all = all[np.lexsort((all[:, 2], -1 * all[:, 1]))]
+    total_losses = all[:, 0].sum()
+    gini_sum = all[:, 0].cumsum().sum() / total_losses
+    gini_sum -= (len(actual) + 1) / 2
+    return gini_sum / len(actual)
+
+def gini_normalized(actual, pred):
+    return gini(actual, pred) / gini(actual, actual)</code></pre>
+
+    <h3>Project Challenges</h3>
+    <h4>1. Data Anonymization & Lack of Domain Context</h4>
+    <ul>
+      <li>Used metadata analysis to classify features (type, missing ratio, cardinality).</li>
+      <li>Outcome: Better feature engineering and validation.</li>
+    </ul>
+
+    <h4>2. Extreme Class Imbalance (~26:1)</h4>
+    <ul>
+      <li>Applied undersampling + oversampling techniques.</li>
+      <li>XGBoost optimization with <code>scale_pos_weight</code>, <code>subsample</code>, <code>max_delta_step</code>.</li>
+      <li>Result: Balanced predictive power and generalization.</li>
+    </ul>
+
+    <h4>3. Handling Missing and Outlier Values</h4>
+    <ul>
+      <li>Missing: Added missing indicators, used RandomForest imputation (improved score ~5%).</li>
+      <li>Outliers: Detected using Z-score, boxplots, and business logic.</li>
+    </ul>
+
+    <h3>Conclusion</h3>
+    <p>
+      Through advanced data analysis, feature engineering, and model optimization, 
+      this project successfully predicted insurance claim risks, providing value in premium pricing, 
+      risk mitigation, and enhancing customer satisfaction.
+    </p>
+
+    <p><a href="https://github.com/snw16/Porto-Seguro-s-Safe-Driver-Prediction" target="_blank">🔗 View on GitHub →</a></p>
+
+  </main>
 
   <footer>
-    &copy; 2025 Sinuo Wang | <a href="https://github.com/snw16" target="_blank">GitHub Profile</a>
+    <a href="https://snw16.github.io/portfolio/" style="color:#93c5fd;">← Back to Portfolio</a>
   </footer>
+
 </body>
 </html>
