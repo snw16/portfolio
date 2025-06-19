@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Shanghai COVID-19 2022 Outbreak Forecast | Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
   <style>
     body {
       margin: 0;
@@ -17,11 +17,32 @@
       background: linear-gradient(90deg, #0f172a, #1e293b);
       color: #fff;
       padding: 40px 20px;
-      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
     }
     header h1 {
       margin: 0;
       font-size: 2.2rem;
+      flex: 1 1 auto;
+      min-width: 250px;
+    }
+    .github-btn {
+      background-color: #2563eb;
+      color: white;
+      font-weight: 700;
+      padding: 12px 24px;
+      border-radius: 8px;
+      text-decoration: none;
+      box-shadow: 0 4px 8px rgba(37, 99, 235, 0.5);
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+      flex-shrink: 0;
+    }
+    .github-btn:hover {
+      background-color: #1e40af;
+      box-shadow: 0 6px 12px rgba(37, 99, 235, 0.8);
     }
     main {
       max-width: 900px;
@@ -63,6 +84,13 @@
 
   <header>
     <h1>Shanghai COVID-19 2022 Outbreak Forecast</h1>
+    <a
+      href="https://github.com/snw16/Shanghai-COVID-19-Outbreak-Forecast"
+      target="_blank"
+      rel="noopener"
+      class="github-btn"
+      >View on GitHub</a
+    >
   </header>
 
   <main>
@@ -123,7 +151,6 @@
       <li><strong>Explainability:</strong> Use SHAP values and feature analysis for stakeholder interpretability.</li>
     </ul>
 
-    <p><a href="https://github.com/snw16/Shanghai-COVID-19-Outbreak-Forecast" target="_blank">🔗 View on GitHub →</a></p>
 
   </main>
 
@@ -133,3 +160,4 @@
 
 </body>
 </html>
+
