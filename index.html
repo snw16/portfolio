@@ -1,49 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>My Data Science Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sinuo's Data Science Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f2f2f2; }
-    header { background: #333; color: #fff; padding: 20px; text-align: center; }
-    .container { padding: 20px; max-width: 900px; margin: auto; }
-    .project { background: #fff; margin-bottom: 15px; padding: 15px; border-radius: 8px; }
-    .project h2 { margin-top: 0; }
-    footer { background: #333; color: #fff; text-align: center; padding: 10px; margin-top: 30px; }
-    a { color: #007acc; }
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(90deg, #0f172a, #1e293b);
+      color: #fff;
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      color: #94a3b8;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+      display: grid;
+      gap: 20px;
+    }
+
+    .project-card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    }
+
+    .project-card h2 {
+      margin-top: 0;
+      color: #0f172a;
+      font-size: 1.5rem;
+    }
+
+    .project-card p {
+      color: #475569;
+      line-height: 1.5;
+      font-size: 1rem;
+    }
+
+    .project-card a {
+      display: inline-block;
+      margin-top: 10px;
+      text-decoration: none;
+      color: #2563eb;
+      font-weight: 600;
+    }
+
+    .project-card a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      background: #1e293b;
+      color: #cbd5e1;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+      font-size: 0.9rem;
+    }
+
+    footer a {
+      color: #93c5fd;
+      text-decoration: none;
+      margin-left: 8px;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
   <header>
-    <h1>Sinuo Wang's Data Science Portfolio</h1>
-    <p>Data Science | Python | SQL | Tableau |Machine Learning</p>
+    <h1>YOUR NAME</h1>
+    <p>Data Science | Machine Learning | Business Analytics</p>
   </header>
 
-  <div class="container">
+  <main class="container">
 
-    <section class="project">
+    <div class="project-card">
       <h2>Driving Towards Safety: XGBoost-Enhanced Prediction of Safe Drivers</h2>
       <p>Conducted advanced feature engineering and optimized XGBoost to predict safe drivers in the Porto Seguro dataset, improving normalized Gini score to 0.28.</p>
-      <p><a href="https://github.com/snw16/Porto-Seguro-s-Safe-Driver-Prediction" target="_blank">View Project →</a></p>
-    </section>
+      <a href="https://github.com/snw16/Porto-Seguro-s-Safe-Driver-Prediction" target="_blank">View Project →</a>
+    </div>
 
-    <section class="project">
+    <div class="project-card">
       <h2>Shanghai COVID-19 2022 Outbreak Forecast</h2>
       <p>Performed causal analysis and multivariate forecasting on COVID-19 case trends, achieving robust prediction results using LightGBM models.</p>
-      <p><a href="https://github.com/snw16/Shanghai_Covid_Predictions" target="_blank">View Project →</a></p>
-    </section>
+      <a href="https://github.com/snw16/Shanghai_Covid_Predictions" target="_blank">View Project →</a>
+    </div>
 
-    <section class="project">
-      <h2>Enhancing E-commerce Customer Insights: RFM and K-Means Driven Segmentation on Shopify Platform</h2>
-      <p>Initiated a customer segmentation project for a Shopify ecommerce platform, categorizing customers using RFM (Recency, Frequency, Monetary) analysis combined with K-Means clustering. Leveraged Python and SQL for robust data analysis and used PowerBI for actionable recommendations, increasing repeat purchase rate from 31% to 42%.</p>
-      <p><a href="https://github.com/snw16/RFM_Analysis" target="_blank">View Project →</a></p>
-    </section>
+    <div class="project-card">
+      <h2>Enhancing E-commerce Customer Insights: RFM & K-Means Segmentation</h2>
+      <p>Developed customer segmentation for a Shopify platform using RFM analysis with K-Means clustering to enhance marketing strategies and increase repeat purchase rate (31% → 42%).</p>
+      <a href="https://github.com/snw16/RFM_Analysis" target="_blank">View Project →</a>
+    </div>
 
-  </div>
+  </main>
 
   <footer>
-    <p>Contact: sinuowang01@gmail.com | <a href="https://github.com/snw16" style="color:#fff;">GitHub</a></p>
+    Contact: sinuowang01@gmail.com  |  <a href="https://github.com/snw16" target="_blank">GitHub</a>
   </footer>
+
 </body>
 </html>
+update index.html with new design
