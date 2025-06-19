@@ -64,6 +64,10 @@
       border-radius: 5px;
       font-family: 'Courier New', monospace;
     }
+    pre {
+      overflow-x: auto;
+      padding: 12px;
+    }
     a {
       color: #2563eb;
       text-decoration: none;
@@ -94,7 +98,63 @@
   </header>
 
   <main>
+    <h2>Project Overview</h2>
+    <h3>Objective</h3>
+    <p>
+      This project aims to predict the likelihood of insurance claims by analyzing drivers’ profiles and driving history. 
+      The goal is to help insurance companies optimize premium pricing, improve risk management, and enhance customer satisfaction.
+    </p>
 
+    <h3>Business Value</h3>
+    <ul>
+      <li><strong>Optimized Premium Pricing:</strong> Personalized premiums, avoid overpricing/underpricing risks.</li>
+      <li><strong>Improved Claims Accuracy:</strong> Better claims resource allocation, reduce unexpected costs.</li>
+      <li><strong>Enhanced Risk Management:</strong> Identify high-risk groups and deliver targeted recommendations.</li>
+      <li><strong>Better Customer Experience:</strong> Tailored offers to improve retention and satisfaction.</li>
+    </ul>
+
+    <h3>Evaluation Metric</h3>
+    <p><strong>Normalized Gini Coefficient:</strong> Robust for imbalanced data, focuses on model’s ranking ability, ideal for insurance tasks.</p>
+
+    <h3>Example Implementation</h3>
+    <pre><code>def gini(actual, pred):
+    assert len(actual) == len(pred)
+    all = np.asarray(np.c_[actual, pred, np.arange(len(actual))], dtype=np.float64)
+    all = all[np.lexsort((all[:, 2], -1 * all[:, 1]))]
+    total_losses = all[:, 0].sum()
+    gini_sum = all[:, 0].cumsum().sum() / total_losses
+    gini_sum -= (len(actual) + 1) / 2
+    return gini_sum / len(actual)
+
+def gini_normalized(actual, pred):
+    return gini(actual, pred) / gini(actual, actual)</code></pre>
+
+    <h3>Project Challenges</h3>
+    <h4>1. Data Anonymization & Lack of Domain Context</h4>
+    <ul>
+      <li>Used metadata analysis to classify features (type, missing ratio, cardinality).</li>
+      <li>Outcome: Better feature engineering and validation.</li>
+    </ul>
+
+    <h4>2. Extreme Class Imbalance (~26:1)</h4>
+    <ul>
+      <li>Applied undersampling + oversampling techniques.</li>
+      <li>XGBoost optimization with <code>scale_pos_weight</code>, <code>subsample</code>, <code>max_delta_step</code>.</li>
+      <li>Result: Balanced predictive power and generalization.</li>
+    </ul>
+
+    <h4>3. Handling Missing and Outlier Values</h4>
+    <ul>
+      <li>Missing: Added missing indicators, used RandomForest imputation (improved score ~5%).</li>
+      <li>Outliers: Detected using Z-score, boxplots, and business logic.</li>
+    </ul>
+
+    <h3>Conclusion</h3>
+    <p>
+      Through advanced data analysis, feature engineering, and model optimization, 
+      this project successfully predicted insurance claim risks, providing value in premium pricing, 
+      risk mitigation, and enhancing customer satisfaction.
+    </p>
   </main>
 
   <footer>
