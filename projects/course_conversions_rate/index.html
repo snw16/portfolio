@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Course Conversion Rate | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      line-height: 1.6;
+    }
+    header {
+      background: linear-gradient(90deg, #0f172a, #1e293b);
+      color: #fff;
+      padding: 40px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 20px;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.2rem;
+      max-width: 900px;
+      line-height: 1.2;
+    }
+    .github-btn {
+      background-color: #2563eb;
+      color: white;
+      font-weight: 700;
+      padding: 12px 28px;
+      border-radius: 8px;
+      text-decoration: none;
+      box-shadow: 0 4px 8px rgba(37, 99, 235, 0.5);
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+      font-size: 1.1rem;
+      user-select: none;
+    }
+    .github-btn:hover {
+      background-color: #1e40af;
+      box-shadow: 0 6px 12px rgba(37, 99, 235, 0.8);
+    }
+    main {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    h2 {
+      color: #0f172a;
+      margin-top: 2rem;
+    }
+    h3 {
+      color: #1e293b;
+      margin-top: 1.5rem;
+    }
+    code, pre {
+      background: #e2e8f0;
+      padding: 5px 8px;
+      border-radius: 5px;
+      font-family: 'Courier New', monospace;
+    }
+    pre {
+      overflow-x: auto;
+      padding: 12px;
+    }
+    a {
+      color: #2563eb;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    footer {
+      background: #1e293b;
+      color: #cbd5e1;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Calculating Free-to-Paid Conversion Rate with SQL</h1>
+    <a
+      href="https://github.com/snw16/course_conversions_rate"
+      target="_blank"
+      rel="noopener"
+      class="github-btn"
+      >View on GitHub</a
+    >
+  </header>
+
+  <main>
+    <h2>Project Overview</h2>
+
+    <h3>Objective</h3>
+    <p>
+      This project calculates the free-to-paid course conversion rates across various channels and devices, providing key insights for optimizing marketing strategies and improving course monetization.
+    </p>
+
+    <h3>Business Value</h3>
+    <ul>
+      <li><strong>Marketing Optimization:</strong> Identify the most effective traffic sources driving paid conversions.</li>
+      <li><strong>Product Strategy:</strong> Analyze device trends to enhance course offerings on relevant platforms.</li>
+      <li><strong>Revenue Growth:</strong> Enable data-driven decisions to increase paid subscriptions and revenue.</li>
+    </ul>
+
+    <h3>Evaluation Metrics</h3>
+    <ul>
+      <li><strong>Overall Conversion Rate:</strong> (Number of Paid Users) ÷ (Number of Free Users) × 100%</li>
+      <li><strong>Source-Level Conversion Rate:</strong> Conversion rate segmented by traffic sources (e.g., organic, paid, referral)</li>
+      <li><strong>Device-Level Conversion Rate:</strong> Conversion rate segmented by device type (e.g., desktop, mobile)</li>
+    </ul>
+
+    <h3>Example SQL Query</h3>
+    <pre><code>USE db_course_conversions;
+
+WITH tmp AS (
+    SELECT 
+        e.student_id,
+        i.date_registered,
+        MIN(e.date_watched) AS first_date_watched,
+        MIN(p.date_purchased) AS first_date_purchased,
+        DATEDIFF(MIN(e.date_watched), MIN(i.date_registered)) AS days_diff_reg_watch,
+        DATEDIFF(MIN(p.date_purchased), MIN(e.date_watched)) AS days_diff_watch_purch
+    FROM
+        student_engagement e
+    JOIN 
+        student_info i ON e.student_id = i.student_id
+    LEFT JOIN
+        student_purchases p ON e.student_id = p.student_id
+    GROUP BY 
+        e.student_id
+    HAVING 
+        first_date_watched &lt;= first_date_purchased OR first_date_purchased IS NULL
+)
+SELECT *
+FROM tmp;
+</code></pre>
+
+    <h3>Conclusion</h3>
+    <p>
+      By leveraging structured SQL analysis, this project enables stakeholders to make informed decisions on marketing and product strategy, driving higher course conversions and revenue.
+    </p>
+  </main>
+
+  <footer>
+    <a href="https://snw16.github.io/portfolio/" style="color:#93c5fd;">← Back to Portfolio</a>
+  </footer>
+</body>
+</html>
