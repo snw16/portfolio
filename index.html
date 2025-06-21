@@ -75,6 +75,13 @@
       text-decoration: underline;
     }
 
+    .tableau-container {
+      background: #fff;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+
     footer {
       background: #1e293b;
       color: #cbd5e1;
@@ -118,7 +125,7 @@
     <div class="project-card">
       <h2>Enhancing E-commerce Customer Insights: RFM & K-Means Segmentation</h2>
       <p>Developed customer segmentation for a Shopify platform using RFM analysis with K-Means clustering to enhance marketing strategies and increase repeat purchase rate (31% → 42%).</p>
-      <a href="https://github.com/snw16/RFM_Analysis" target="_blank" rel="noopener noreferrer">View Project →</a>
+      <a href="https://github.com/snw16/RFM_Analysis" target="_blank">View Project →</a>
     </div>
 
     <div class="project-card">
@@ -127,17 +134,64 @@
       <a href="projects/course_conversions_rate/" class="btn">View Project</a>
     </div>
 
-    <div class="project-card">
+    <!-- Tableau Embedded Project -->
+    <div class="tableau-container">
       <h2>Analyzing Healthcare Data with Tableau</h2>
       <p>Interactive healthcare data visualizations created using Tableau to uncover insights and trends.</p>
-      <a href="https://snw16.github.io/Tableau-Analyzing-Healthcare-Data/" target="_blank" rel="noopener noreferrer">View Interactive Dashboard →</a>
+      <div class='tableauPlaceholder' id='viz1750465710178' style='position: relative;'>
+        <noscript>
+          <a href='#'>
+            <img alt='LOS dashboard' src='https://public.tableau.com/static/images/An/AnalyzingHealthcareDatainTableau_17504627424760/LOSdashboard/1_rss.png' style='border: none' />
+          </a>
+        </noscript>
+        <object class='tableauViz' style='display:none;'>
+          <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
+          <param name='embed_code_version' value='3' />
+          <param name='site_root' value='' />
+          <param name='name' value='AnalyzingHealthcareDatainTableau_17504627424760/LOSdashboard' />
+          <param name='tabs' value='no' />
+          <param name='toolbar' value='yes' />
+          <param name='static_image' value='https://public.tableau.com/static/images/An/AnalyzingHealthcareDatainTableau_17504627424760/LOSdashboard/1.png' />
+          <param name='animate_transition' value='yes' />
+          <param name='display_static_image' value='yes' />
+          <param name='display_spinner' value='yes' />
+          <param name='display_overlay' value='yes' />
+          <param name='display_count' value='yes' />
+          <param name='language' value='en-US' />
+          <param name='filter' value='publish=yes' />
+        </object>
+      </div>
     </div>
 
   </main>
 
   <footer>
-    Contact: sinuowang01@gmail.com | <a href="https://github.com/snw16" target="_blank" rel="noopener noreferrer">GitHub</a>
+    Contact: sinuowang01@gmail.com  |  <a href="https://github.com/snw16" target="_blank">GitHub</a>
   </footer>
+
+  <script type='text/javascript'>
+    var divElement = document.getElementById('viz1750465710178');
+    var vizElement = divElement.getElementsByTagName('object')[0];
+    function resizeViz() {
+      if (divElement.offsetWidth > 800) {
+        vizElement.style.width = '100%';
+        vizElement.style.height = (divElement.offsetWidth * 0.6) + 'px';
+      } else if (divElement.offsetWidth > 500) {
+        vizElement.style.width = '100%';
+        vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
+      } else {
+        vizElement.style.width = '100%';
+        vizElement.style.height = '1800px';
+      }
+    }
+    window.addEventListener('resize', resizeViz);
+    resizeViz();
+    var scriptElement = document.createElement('script');
+    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+    vizElement.parentNode.insertBefore(scriptElement, vizElement);
+  </script>
+
 </body>
 </html>
+
 
