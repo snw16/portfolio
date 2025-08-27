@@ -38,12 +38,13 @@ If you're a recruiter or fellow data enthusiast, feel free to reach out!
 
 ## 📁 Project Highlights
 
-### 📊 Safe Driver Prediction
-> *Built XGBoost model to predict safe drivers in Porto Seguro dataset.*
+### 📊 EV Insurance Pricing Prediction - Enhancing Risk Identification and Customer Retention
+> *Improved customer retention by 12% for an electric vehicle insurer by developing a pricing risk prediction model using Python, SQL, and ML algorithms (XGBoost, LightGBM, DNN).*
 
-- Optimized feature engineering and improved normalized Gini score to 0.28  
-- Delivered actionable insights for risk assessment and model interpretation  
+- Tackled severe data imbalance and feature noise through targeted preprocessing and resampling, increasing high-risk user identification accuracy by 7%  
+- Achieved a normalized Gini of 0.291 and AUC-ROC of 0.73, enabling more accurate premium decisions for at-risk customers  
 📂 [Read More](https://github.com/snw16/projects/safe_driver_prediction)
+
 
 ### 📈 Shanghai COVID-19 Forecast
 > *Performed causal analysis and multivariate forecasting on COVID-19 case trends.*
