@@ -16,7 +16,7 @@ I focus on end-to-end data projects, from data cleaning and feature engineering 
 If you're a recruiter or fellow data enthusiast, feel free to reach out!
 
 - Email: sinuowang01@gmail.com  
-- LinkedIn: [Your LinkedIn](https://www.linkedin.com/in/yourprofile/)  
+- LinkedIn: [Your LinkedIn]([https://www.linkedin.com/in/yourprofile/](https://www.linkedin.com/in/sinuowang/))  
 
 ---
 
