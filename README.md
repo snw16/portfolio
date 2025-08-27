@@ -39,25 +39,34 @@ If you're a recruiter or fellow data enthusiast, feel free to reach out!
 ## 📁 Project Highlights
 
 ### 📊 EV Insurance Pricing Prediction - Enhancing Risk Identification and Customer Retention
-> *Improved customer retention by 12% for an electric vehicle insurer by developing a pricing risk prediction model using Python, SQL, and ML algorithms (XGBoost, LightGBM, DNN).*
+*Improved customer retention by 12% for an electric vehicle insurer by developing a pricing risk prediction model using Python, SQL, and ML algorithms (XGBoost, LightGBM, DNN).*
 
-- Tackled severe data imbalance and feature noise through targeted preprocessing and resampling, increasing high-risk user identification accuracy by 7%  
-- Achieved a normalized Gini of 0.291 and AUC-ROC of 0.73, enabling more accurate premium decisions for at-risk customers  
+- Conducted extensive data preprocessing on over 1 million records, establishing abnormal and missing data handling based on business logic  
+- Performed meta-data analysis on 57 anonymous driver features, applying resampling methods (Borderline-SMOTE/SMOTE-ENN) to handle severe data imbalance and reconstruct underlying patterns  
+- Executed feature engineering by interacting, merging, enhancing, and selecting elite features, reducing dimensionality from 57 to 30, saving high-dimensional research and maintenance costs  
+- Developed and iteratively optimized a XGBoost classifier, achieving a normalized Gini of 0.291 and AUC-ROC of 0.73  
+- Increased high-risk user identification accuracy by 7% through targeted preprocessing and resampling  
+- Generated comprehensive data reports and visualizations using PowerBI to communicate insights and support data-driven premium decisions
 📂 [Read More](https://github.com/snw16/projects/safe_driver_prediction)
 
 
 ### 📈 Shanghai COVID-19 Forecast
-> *Performed causal analysis and multivariate forecasting on COVID-19 case trends.*
+*Performed causal analysis and multivariate forecasting on COVID-19 case trends.*
 
-- Built LightGBM models for accurate prediction  
-- Conducted data-driven analysis for policy impact and outbreak trend visualization  
+- Leveraged web-scraper to extract and receive daily updates from JHU CSSE and Shanghai Healthcare Commission  
+- Conducted data validation, processing, transformation, and integration using Python for data mining  
+- Performed causal analysis on infection rate, fatality rate, and outbreak time-points with self-made visualization dashboard  
+- Developed and evaluated univariate & multivariate forecasting models (Best: LightGBM) based on 4 robust metrics  
+- Conducted data-driven analysis for policy impact and outbreak trend visualization
 📂 [Read More](https://github.com/snw16/projects/shanghai_covid_forecast)
 
 ### 📊 RFM & K-Means Customer Segmentation
-> *Developed customer segmentation for a Shopify platform.*
+*Initiated a customer segmentation project for a Shopify e-commerce platform using RFM (Recency, Frequency, Monetary) analysis combined with K-Means clustering.*
 
-- Used RFM analysis combined with K-Means clustering  
-- Helped optimize marketing strategies and increase repeat purchase rate (31% → 42%)  
+- Leveraged Python and SQL to perform robust data analysis, processing, and RFM evaluation for customer engagement and value  
+- Applied K-Means clustering to segment customers into actionable groups based on RFM scores, optimizing marketing strategies  
+- Generated detailed RFM summaries and visualizations, identifying segments such as 'VIP', 'Frequent Shoppers', and 'At Risk'  
+- Presented findings and actionable recommendations via PowerBI, enhancing e-commerce strategies and increasing repeat purchase rate from 31% to 42%
 📂 [Read More](https://github.com/snw16/RFM_Analysis)
 
 ### 📈 Course Free-to-Paid Conversion
