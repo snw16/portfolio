@@ -47,7 +47,7 @@ If you're a recruiter or fellow data enthusiast, feel free to reach out!
 - Developed and iteratively optimized a XGBoost classifier, achieving a normalized Gini of 0.291 and AUC-ROC of 0.73  
 - Increased high-risk user identification accuracy by 7% through targeted preprocessing and resampling  
 - Generated comprehensive data reports and visualizations using PowerBI to communicate insights and support data-driven premium decisions
-📂 [Read More][(https://github.com/snw16/projects/safe_driver_prediction)](https://github.com/snw16/Porto-Seguro-s-Safe-Driver-Prediction)
+📂 [Read More](https://github.com/snw16/Porto-Seguro-s-Safe-Driver-Prediction)
 
 
 ### 📈 Shanghai COVID-19 Forecast
@@ -58,7 +58,7 @@ If you're a recruiter or fellow data enthusiast, feel free to reach out!
 - Performed causal analysis on infection rate, fatality rate, and outbreak time-points with self-made visualization dashboard  
 - Developed and evaluated univariate & multivariate forecasting models (Best: LightGBM) based on 4 robust metrics  
 - Conducted data-driven analysis for policy impact and outbreak trend visualization
-📂 [Read More](https://github.com/snw16/projects/shanghai_covid_forecast)
+📂 [Read More]((https://github.com/snw16/Shanghai_Covid_Predictions))
 
 ### 📊 RFM & K-Means Customer Segmentation
 *Initiated a customer segmentation project for a Shopify e-commerce platform using RFM (Recency, Frequency, Monetary) analysis combined with K-Means clustering.*
