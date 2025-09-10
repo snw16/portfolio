@@ -47,7 +47,7 @@ If you're a recruiter or fellow data enthusiast, feel free to reach out!
 - Developed and iteratively optimized a XGBoost classifier, achieving a normalized Gini of 0.291 and AUC-ROC of 0.73  
 - Increased high-risk user identification accuracy by 7% through targeted preprocessing and resampling  
 - Generated comprehensive data reports and visualizations using PowerBI to communicate insights and support data-driven premium decisions
-📂 [Read More](https://github.com/snw16/projects/safe_driver_prediction)
+📂 [Read More][(https://github.com/snw16/projects/safe_driver_prediction)](https://github.com/snw16/Porto-Seguro-s-Safe-Driver-Prediction)
 
 
 ### 📈 Shanghai COVID-19 Forecast
