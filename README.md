@@ -58,7 +58,7 @@ If you're a recruiter or fellow data enthusiast, feel free to reach out!
 - Performed causal analysis on infection rate, fatality rate, and outbreak time-points with self-made visualization dashboard  
 - Developed and evaluated univariate & multivariate forecasting models (Best: LightGBM) based on 4 robust metrics  
 - Conducted data-driven analysis for policy impact and outbreak trend visualization
-📂 [Read More]((https://github.com/snw16/Shanghai_Covid_Predictions))
+📂 [Read More](https://github.com/snw16/Shanghai_Covid_Predictions)
 
 ### 📊 RFM & K-Means Customer Segmentation
 *Initiated a customer segmentation project for a Shopify e-commerce platform using RFM (Recency, Frequency, Monetary) analysis combined with K-Means clustering.*
@@ -73,11 +73,5 @@ If you're a recruiter or fellow data enthusiast, feel free to reach out!
 > *Analyzed free-to-paid course conversion by traffic source and device type using SQL.*
 
 - Built advanced queries to provide actionable insights for marketing optimization  
-📂 [Read More](https://github.com/snw16/projects/course_conversions_rate)
+📂 [Read More](https://github.com/snw16/course_conversions_rate)
 
-### 🏥 Healthcare Data Dashboard
-> *Created interactive Tableau dashboards to uncover healthcare insights.*
-
-- Visualized LOS trends and patient outcomes  
-- Designed for stakeholders to explore key metrics interactively  
-📂 [View Dashboard](https://snw16.github.io/Tableau-Analyzing-Healthcare-Data/)
