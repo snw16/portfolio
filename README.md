@@ -25,7 +25,7 @@ If you're a recruiter or fellow data enthusiast, feel free to reach out!
 | EV Insurance Pricing Prediction | XGBoost, Feature Engineering | Python, XGBoost, Pandas | [View](https://github.com/snw16/Porto-Seguro-s-Safe-Driver-Prediction) |
 | Shanghai COVID Forecast | Time Series, Causal Analysis | Python, LightGBM | [View](https://github.com/snw16/Shanghai_Covid_Predictions) |
 | RFM & K-Means Segmentation | Customer Insights | SQL, Python, K-Means | [View](https://github.com/snw16/RFM_Analysis) |
-| Course Free-to-Paid Conversion | SQL, Conversion Analysis | SQL, Tableau | [View](https://github.com/snw16/projects/course_conversions_rate)
+| Course Free-to-Paid Conversion | SQL, Conversion Analysis | SQL, Tableau | [View](https://github.com/snw16/course_conversions_rate)
 
 ---
 
